@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package endtermPrimeCompostion;
+
+option go_package = "github.com\\Bekzat02\\EndkaGo\\shoppb;shoppb";
+
+service CalculatorService{
+  rpc getProducts(NumberRequest) returns(stream ProductsResponse) {}
+}
+
+
+message NumberRequest{
+ int64 number= 1;
+}
+
+message ProductsResponse{
+  string result = 1;
+}
+
